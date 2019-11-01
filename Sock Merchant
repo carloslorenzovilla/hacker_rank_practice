@@ -1,0 +1,16 @@
+def sockMerchant(n, ar):
+    socks = {}
+
+    for char in ar:
+        if char in socks:
+            socks[char] += 1
+        else:
+            socks[char] = 1
+
+    pairs = 0
+
+    for color in socks:
+        if math.floor(socks[color] / 2) >= 1:
+            pairs += math.floor(socks[color] / 2)
+    
+    return pairs
