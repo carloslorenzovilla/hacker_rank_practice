@@ -1,0 +1,5 @@
+def countApplesAndOranges(s, t, a, b, apples, oranges):
+    print(sum([1 for apple in apples if s <= (apple + a) <= t]))
+    print(sum([1 for orange in oranges if s <= (orange + b) <= t]))
+
+    return 
