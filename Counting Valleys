@@ -1,0 +1,12 @@
+def countingValleys(n, s):
+    p = 0
+    valley = 0
+    for i in s:
+        if i == "U":
+            p += 1
+            if p == 0:
+                valley += 1
+        else:
+            p -= 1
+
+    return(valley)
