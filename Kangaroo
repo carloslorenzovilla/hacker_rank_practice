@@ -1,0 +1,18 @@
+def kangaroo(x1, v1, x2, v2):
+    """ Determines if both kangaroos will end up
+        in the same location at the same time
+
+        x1: int
+        v1: int
+        x2: int
+        v2: int
+
+        returns: string
+    """
+    jump = 1
+    while True:
+        if v1 <= v2 or (x1 + v1*jump) > (x2 + v2*jump):
+            return 'NO'
+        elif (x1 + v1*jump) == (x2 + v2*jump):
+            return 'YES'
+        jump += 1
