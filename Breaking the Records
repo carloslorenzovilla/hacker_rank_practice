@@ -1,0 +1,19 @@
+def breakingRecords(scores):
+    """ Returns an integer array containing the number
+        of times the high and low record is broken (respectively)
+        
+        scores: list of int
+        
+        returns: list of int
+    
+    """
+    high = low = scores[0]
+    high_count = low_count = 0
+    for score in scores[1:]:
+        if max(high, score) > high:
+            high = score
+            high_count += 1
+        if min(low, score) < low:
+            low = score
+            low_count += 1
+    return [high_count, low_count]
